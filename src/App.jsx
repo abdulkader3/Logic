@@ -6,6 +6,7 @@ import LayoutOne from './Layout/LayoutOne'
 import Buy from './Pages/Buy'
 import Card from './Pages/Card'
 import app from './firebase.config'
+import { ToastContainer } from 'react-toastify'
 
 
 
@@ -30,6 +31,7 @@ function App() {
     <>
 
     <RouterProvider router={shanto}/>
+    <ToastContainer />
      
     </>
   )

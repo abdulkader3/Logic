@@ -6,6 +6,9 @@ import ProdactData from "../Locac data/ProdactData";
 import { useDispatch } from "react-redux";
 import { AddToCard, ProdactSlice } from "../Slices/SliceUser";
 import { FaCartPlus } from "react-icons/fa";
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -57,11 +60,25 @@ const buttonForAddCard = (product) => {
   // Add the new product to the array
   products.push(product);
 
+ 
+
   // Store the updated products array back into localStorage
   localStorage.setItem('products', JSON.stringify(products));
 
   // Update the Redux state
   dispatch(AddToCard(products));
+  toast.success('Prodact is add ✅', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+    });
+  
 }
 
 
