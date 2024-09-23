@@ -4,6 +4,9 @@ import './App.css'
 import Home from './Pages/Home'
 import LayoutOne from './Layout/LayoutOne'
 import Buy from './Pages/Buy'
+import Card from './Pages/Card'
+import app from './firebase.config'
+
 
 
 
@@ -16,6 +19,7 @@ function App() {
         <Route path='/' element={<LayoutOne/>}>
         <Route index element={<Home/>}/>
         <Route path='/buy' element={<Buy/>}/>
+        <Route path='/card' element={<Card/>}/>
         </Route>
       </Route>
     )
